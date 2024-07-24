@@ -57,11 +57,7 @@ export default function Dashboard(props: { [x: string]: any }) {
     return routes.map((route: RoutesType, key: any) => {
       if (route.layout === '/rtl') {
         return (
-          <Route
-            path={route.layout + route.path}
-            element={route.component}
-            key={key}
-          />
+          <Route path={`${route.path}`} element={route.component} key={key} />
         );
       } else {
         return null;

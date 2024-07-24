@@ -19,11 +19,7 @@ export default function Auth() {
     return routes.map((route: RoutesType, key: any) => {
       if (route.layout === '/auth') {
         return (
-          <Route
-            path={route.layout + route.path}
-            element={route.component}
-            key={key}
-          />
+          <Route path={`${route.path}`} element={route.component} key={key} />
         );
       } else {
         return null;
