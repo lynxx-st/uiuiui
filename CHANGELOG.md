@@ -1,4 +1,11 @@
 # Changelog
+## [2.0.0] 2024-07-24
+
+### Vulnerabilities removed
+
+- Most vulnerabilities removed, besides those cause by `react-scripts`. We kept this depedency due to the fact that there are
+many users who still use it, and there is already a Next.js version for thos who want to migrate from `react-scripts`.
+- Updated to React 18. 
 
 
 ## [1.1.1] 2022-11-01
