@@ -13,9 +13,12 @@ import NFTMarketplace from 'views/admin/marketplace';
 import Profile from 'views/admin/profile';
 import DataTables from 'views/admin/dataTables';
 import RTL from 'views/admin/rtl';
+import ExpensesPage from 'views/admin/expenses';
+import CategoriesPage from 'views/admin/categories';
 
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
+import SignUp from 'views/auth/signUp';
 
 const routes = [
   {
@@ -48,6 +51,20 @@ const routes = [
     component: <DataTables />,
   },
   {
+    name: 'Expenses',
+    layout: '/admin',
+    path: '/expenses',
+    icon: <Icon as={MdOutlineShoppingCart} width="20px" height="20px" color="inherit" />,
+    component: <ExpensesPage />,
+  },
+  {
+    name: 'Categories',
+    layout: '/admin',
+    path: '/categories',
+    icon: <Icon as={MdOutlineShoppingCart} width="20px" height="20px" color="inherit" />,
+    component: <CategoriesPage />,
+  },
+  {
     name: 'Profile',
     layout: '/admin',
     path: '/profile',
@@ -60,6 +77,13 @@ const routes = [
     path: '/sign-in',
     icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
     component: <SignInCentered />,
+  },
+  {
+    name: 'Sign Up',
+    layout: '/auth',
+    path: '/sign-up',
+    icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
+    component: <SignUp />,
   },
   {
     name: 'RTL Admin',

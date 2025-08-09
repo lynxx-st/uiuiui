@@ -23,6 +23,7 @@ import React from 'react';
 // Assets
 import navImage from 'assets/img/layout/Navbar.png';
 import { MdNotificationsNone, MdInfoOutline } from 'react-icons/md';
+import { signOut } from 'lib/api';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { FaEthereum } from 'react-icons/fa';
 import routes from 'routes';
@@ -208,13 +209,15 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} borderRadius='8px' px='14px'>
 							<Text fontSize='sm'>Newsletter Settings</Text>
 						</MenuItem>
-						<MenuItem
+                        <MenuItem
 							_hover={{ bg: 'none' }}
 							_focus={{ bg: 'none' }}
 							color='red.400'
 							borderRadius='8px'
-							px='14px'>
-							<Text fontSize='sm'>Log out</Text>
+                            px='14px'
+                            onClick={() => signOut()}
+                        >
+                            <Text fontSize='sm'>Log out</Text>
 						</MenuItem>
 					</Flex>
 				</MenuList>
