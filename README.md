@@ -69,6 +69,32 @@ Then run this command to start your local server
 npm start
 ```
 
+## Offline-to-Online Expense Tracker (Supabase)
+
+Adds a mobile-first expense tracker to this template, with offline caching and online sync via Supabase.
+
+Stack:
+- React + TypeScript + Chakra UI (no Tailwind)
+- Supabase: Auth, Postgres (RLS), Realtime, Storage
+- PWA service worker
+
+Supabase setup:
+1. In Supabase SQL Editor, run `supabase/schema.sql`.
+2. Create Storage bucket `receipts` (private).
+3. Configure Google OAuth provider if needed.
+4. Optionally set env vars in `.env`:
+```
+REACT_APP_SUPABASE_URL=your-url
+REACT_APP_SUPABASE_ANON_KEY=your-anon-key
+REACT_APP_ONESIGNAL_APP_ID=your-onesignal-id
+```
+
+Routes:
+- `/auth/sign-in`, `/auth/sign-up`
+- `/admin/expenses`, `/admin/categories`
+
+Export: Use the Export CSV button on Expenses to download a monthly summary.
+
 ### Example Pages
 
 If you want to get inspiration or just show something directly to your clients,
